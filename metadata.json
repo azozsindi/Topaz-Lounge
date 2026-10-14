@@ -1,0 +1,6 @@
+{
+  "name": "توباز لاونج | Topaz Lounge Jeddah",
+  "description": "الموقع الرسمي لتوباز لاونج في جدة - قهوة مختصة وجلسات داخلية فاخرة مفتوح على مدار 24 ساعة في حي النزهة طريق المكرونة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

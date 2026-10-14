@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-tajawal: 'Tajawal', sans-serif;
+    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-tajawal);
+    background-color: #0b0908;
+    color: #f5f0e8;
+  }
+}
+
+.font-latin {
+  font-family: var(--font-jakarta);
+}
+
+.neon-amber-glow {
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.7), 0 0 25px rgba(245, 158, 11, 0.4), 0 0 45px rgba(217, 119, 6, 0.2);
+}
+
+.neon-box-glow {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.35), 0 0 50px -10px rgba(217, 119, 6, 0.15);
+}
+
+.neon-border-glow {
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.3), inset 0 0 15px rgba(245, 158, 11, 0.15);
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 18px rgba(245, 158, 11, 0.75));
+  }
+  50% {
+    opacity: 0.94;
+    filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.55));
+  }
+}
+
+.animate-subtle-glow {
+  animation: subtlePulse 4s ease-in-out infinite;
+}
