@@ -13,24 +13,21 @@ export const TopazLogo: React.FC<TopazLogoProps> = ({
   className = '',
   glow = true,
 }) => {
-  // Scaling factors
-  const dimensions = {
-    sm: { width: 140, height: 75 },
-    md: { width: 220, height: 115 },
-    lg: { width: 320, height: 165 },
-    xl: { width: 440, height: 230 },
+  // Responsive sizing classes
+  const sizeClasses = {
+    sm: 'w-[120px] sm:w-[140px]',
+    md: 'w-[180px] sm:w-[220px]',
+    lg: 'w-[260px] sm:w-[320px]',
+    xl: 'w-[280px] min-[375px]:w-[310px] sm:w-[380px] md:w-[440px]',
   }[size];
 
   return (
     <div
-      className={`relative inline-flex flex-col items-center justify-center select-none ${className}`}
-      style={{ minWidth: dimensions.width }}
+      className={`relative inline-flex flex-col items-center justify-center select-none max-w-full ${sizeClasses} ${className}`}
     >
       <svg
         viewBox="0 0 340 180"
-        width={dimensions.width}
-        height={dimensions.height}
-        className={`overflow-visible transition-all duration-300 ${glow ? 'animate-subtle-glow' : ''}`}
+        className={`w-full h-auto overflow-visible transition-all duration-300 ${glow ? 'animate-subtle-glow' : ''}`}
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>

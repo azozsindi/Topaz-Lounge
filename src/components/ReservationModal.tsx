@@ -141,7 +141,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
             <select
               value={timePreference}
               onChange={(e) => setTimePreference(e.target.value)}
-              className="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-stone-100 focus:outline-none focus:border-amber-400"
+              className="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-2.5 text-base sm:text-sm text-stone-100 focus:outline-none focus:border-amber-400 min-h-[44px]"
             >
               <option value="خلال ساعة من الآن">خلال ساعة من الآن (وصول فوري)</option>
               <option value="اليوم في المساء (بين 8 - 12 ليلاً)">اليوم في المساء (بين 8 - 12 ليلاً)</option>
@@ -161,7 +161,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
               placeholder="مثال: عبدالله أو أم فهد"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400"
+              className="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-2.5 text-base sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 min-h-[44px]"
             />
           </div>
 
@@ -175,7 +175,7 @@ export const ReservationModal: React.FC<ReservationModalProps> = ({ isOpen, onCl
               placeholder="مثلاً: نحتاج أفياش شحن، أو طاولة هادئة"
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              className="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400"
+              className="w-full bg-stone-900 border border-stone-800 rounded-xl px-4 py-2.5 text-base sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 min-h-[44px]"
             />
           </div>
 

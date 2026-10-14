@@ -45,16 +45,16 @@ export const MenuSection: React.FC = () => {
         </div>
 
         {/* Category Tabs & Search Bar */}
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-amber-950/40">
-          {/* Functional Button Segmented Controls */}
-          <div className="flex flex-wrap items-center justify-center gap-2 p-1.5 bg-[#14100e] border border-amber-950/60 rounded-xl w-full lg:w-auto">
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 mb-8 sm:mb-10 pb-6 border-b border-amber-950/40">
+          {/* Horizontally scrollable segmented controls on mobile, flex on desktop */}
+          <div className="flex items-center gap-1.5 p-1.5 bg-[#14100e] border border-amber-950/60 rounded-xl overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden w-full lg:w-auto">
             {MENU_CATEGORIES.map((cat) => {
               const isActive = activeCategory === cat.id;
               return (
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all whitespace-nowrap shrink-0 ${
+                  className={`px-3.5 sm:px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all whitespace-nowrap shrink-0 min-h-[40px] ${
                     isActive
                       ? 'bg-amber-400 text-stone-950 shadow-[0_0_15px_rgba(245,158,11,0.3)]'
                       : 'text-stone-400 hover:text-stone-100 hover:bg-stone-900'
@@ -67,22 +67,22 @@ export const MenuSection: React.FC = () => {
           </div>
 
           {/* Search Input */}
-          <div className="relative w-full lg:w-72">
+          <div className="relative w-full lg:w-80 shrink-0">
             <Search
               size={18}
               className="absolute right-3.5 top-1/2 -translate-y-1/2 text-stone-500 pointer-events-none"
             />
             <input
               type="text"
-              placeholder="ابحث عن مشروب أو حلى..."
+              placeholder="ابحث عن مشروب، شاهي أو حلى..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-[#14100e] border border-amber-950/60 rounded-xl pl-4 pr-10 py-2.5 text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+              className="w-full bg-[#14100e] border border-amber-950/60 rounded-xl pl-4 pr-10 py-2.5 text-base sm:text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors min-h-[44px]"
             />
           </div>
         </div>
 
-        {/* Menu Items Grid */}
+        {/* Menu Items Grid - 1 col on mobile, 2 on tablet, 3 on laptop, 4 on wide PC */}
         {filteredItems.length === 0 ? (
           <div className="py-16 text-center text-stone-400">
             <Coffee size={40} className="mx-auto text-amber-500/50 mb-3" />
@@ -90,7 +90,7 @@ export const MenuSection: React.FC = () => {
             <p className="text-xs text-stone-500 mt-1">جرّب البحث باسم آخر أو اختر تصنيفاً مختلفاً</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {filteredItems.map((item) => (
               <div
                 key={item.id}

@@ -58,23 +58,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
         </div>
 
         {/* Headline & Subhead */}
-        <h1 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-stone-100 tracking-tight leading-[1.25] text-balance max-w-4xl">
+        <h1 className="mt-4 sm:mt-6 text-2xl min-[400px]:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-stone-100 tracking-tight leading-[1.25] text-balance max-w-4xl px-2">
           ملاذك الهادئ في قلب جدة..{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-l from-amber-200 via-amber-400 to-amber-500">
             على مدار الساعة
           </span>
         </h1>
 
-        <p className="mt-4 text-base sm:text-lg md:text-xl text-stone-300 max-w-2xl leading-relaxed text-balance">
+        <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-stone-300 max-w-2xl leading-relaxed text-balance px-2">
           جلسات داخلية فاخرة صُممت لراحتك التامة، قهوة مختصة محضرة بشغف، وأجواء ليلية راقية
           ترحب بك في أي وقت ليلاً أو نهاراً.
         </p>
 
         {/* Action Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md">
+        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md px-2">
           <a
             href="#menu"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-bold text-stone-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 rounded-xl shadow-[0_0_25px_rgba(245,158,11,0.4)] hover:shadow-[0_0_35px_rgba(245,158,11,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-bold text-stone-950 bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 rounded-xl shadow-[0_0_25px_rgba(245,158,11,0.4)] hover:shadow-[0_0_35px_rgba(245,158,11,0.6)] hover:scale-[1.02] active:scale-[0.98] transition-all min-h-[44px]"
           >
             <Coffee size={18} />
             استكشف قائمة القهوة والحلى
@@ -82,7 +82,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
 
           <button
             onClick={onOpenBooking}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-amber-200 bg-stone-900/80 hover:bg-stone-800 border border-amber-500/30 hover:border-amber-400 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 text-xs sm:text-sm font-semibold text-amber-200 bg-stone-900/80 hover:bg-stone-800 border border-amber-500/30 hover:border-amber-400 rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] min-h-[44px]"
           >
             <Armchair size={18} className="text-amber-400" />
             احجز طاولتك بالداخل
@@ -90,7 +90,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
         </div>
 
         {/* Direct WhatsApp Quick Connect */}
-        <div className="mt-5 flex items-center gap-2 text-xs sm:text-sm text-stone-400">
+        <div className="mt-4 sm:mt-5 flex items-center gap-2 text-xs sm:text-sm text-stone-400">
           <span>حجز سريع ومباشر:</span>
           <a
             href={`https://wa.me/966562370987?text=${encodeURIComponent(
@@ -98,47 +98,47 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-4"
+            className="inline-flex items-center gap-1.5 text-amber-400 hover:text-amber-300 font-semibold underline underline-offset-4 py-1"
           >
             <MessageSquare size={15} />
             واتساب 056 237 0987
           </a>
         </div>
 
-        {/* Four Real Proof Highlights Strip - Concise, No Repetition */}
-        <div className="mt-14 w-full grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 border-t border-amber-950/40 pt-8 text-right">
-          <div className="bg-[#120f0d]/80 border border-amber-950/50 rounded-xl p-4 sm:p-5 flex flex-col justify-between">
-            <div className="text-amber-400 text-sm font-semibold mb-1 flex items-center gap-2">
-              <Armchair size={17} /> جلسات داخلية وثيرة
+        {/* Four Real Proof Highlights Strip - 100% Mobile & PC Responsive */}
+        <div className="mt-10 sm:mt-14 w-full grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 border-t border-amber-950/40 pt-6 sm:pt-8 text-right">
+          <div className="bg-[#120f0d]/80 border border-amber-950/50 rounded-xl p-3 sm:p-5 flex flex-col justify-between">
+            <div className="text-amber-400 text-xs sm:text-sm font-semibold mb-1 flex items-center gap-1.5 sm:gap-2">
+              <Armchair size={16} className="shrink-0" /> جلسات وثيرة
             </div>
-            <p className="text-xs text-stone-400 leading-relaxed">
+            <p className="text-[11px] sm:text-xs text-stone-400 leading-relaxed">
               أرائك مريحة وطاولات واسعة صُممت للخصوصية والاسترخاء.
             </p>
           </div>
 
-          <div className="bg-[#120f0d]/80 border border-amber-950/50 rounded-xl p-4 sm:p-5 flex flex-col justify-between">
-            <div className="text-amber-400 text-sm font-semibold mb-1 flex items-center gap-2">
-              <Clock size={17} /> خدمة 24/7
+          <div className="bg-[#120f0d]/80 border border-amber-950/50 rounded-xl p-3 sm:p-5 flex flex-col justify-between">
+            <div className="text-amber-400 text-xs sm:text-sm font-semibold mb-1 flex items-center gap-1.5 sm:gap-2">
+              <Clock size={16} className="shrink-0" /> خدمة 24/7
             </div>
-            <p className="text-xs text-stone-400 leading-relaxed">
+            <p className="text-[11px] sm:text-xs text-stone-400 leading-relaxed">
               أبوابنا مفتوحة طوال الليل والنهار لاستقبالكم.
             </p>
           </div>
 
-          <div className="bg-[#120f0d]/80 border border-amber-950/50 rounded-xl p-4 sm:p-5 flex flex-col justify-between">
-            <div className="text-amber-400 text-sm font-semibold mb-1 flex items-center gap-2">
-              <Coffee size={17} /> محاصيل مختصة
+          <div className="bg-[#120f0d]/80 border border-amber-950/50 rounded-xl p-3 sm:p-5 flex flex-col justify-between">
+            <div className="text-amber-400 text-xs sm:text-sm font-semibold mb-1 flex items-center gap-1.5 sm:gap-2">
+              <Coffee size={16} className="shrink-0" /> محاصيل مختصة
             </div>
-            <p className="text-xs text-stone-400 leading-relaxed">
+            <p className="text-[11px] sm:text-xs text-stone-400 leading-relaxed">
               تقطير يدوي متقن وخيارات حلى طازجة يومياً.
             </p>
           </div>
 
-          <div className="bg-[#120f0d]/80 border border-amber-950/50 rounded-xl p-4 sm:p-5 flex flex-col justify-between">
-            <div className="text-amber-400 text-sm font-semibold mb-1 flex items-center gap-2">
-              <MapPin size={17} /> حي النزهة
+          <div className="bg-[#120f0d]/80 border border-amber-950/50 rounded-xl p-3 sm:p-5 flex flex-col justify-between">
+            <div className="text-amber-400 text-xs sm:text-sm font-semibold mb-1 flex items-center gap-1.5 sm:gap-2">
+              <MapPin size={16} className="shrink-0" /> حي النزهة
             </div>
-            <p className="text-xs text-stone-400 leading-relaxed">
+            <p className="text-[11px] sm:text-xs text-stone-400 leading-relaxed">
               طريق المكرونة، جدة، وصول سهل ومواقف متوفرة.
             </p>
           </div>

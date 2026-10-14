@@ -4,7 +4,7 @@ import { Phone, MapPin, Clock, MessageSquare, Instagram, Heart } from 'lucide-re
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="contact" className="bg-[#080605] border-t border-amber-950/60 pt-16 pb-12 px-4 sm:px-6 lg:px-8 text-stone-400">
+    <footer id="contact" className="bg-[#080605] border-t border-amber-950/60 pt-16 pb-28 sm:pb-12 px-4 sm:px-6 lg:px-8 text-stone-400">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-amber-950/40">
           {/* Col 1: Brand & Logo */}
